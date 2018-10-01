@@ -29,12 +29,12 @@ void Contact::displayFullContact() {
 	std::cout
 		<< "Her/him sweet first name : " << info.first_name << std::endl
 		<< "Her/him cute last name : " << info.last_name << std::endl
-		<< "Her/him sweet nickname : " << info.nickname << std::endl
+		<< "Her/him amazing nickname : " << info.nickname << std::endl
 		<< "Her/him pro gamer login : " << info.login << std::endl
-		<< "Thim is where i can find her/him : " << info.postal_address << std::endl
+		<< "This is where i can find her/him : " << info.postal_address << std::endl
 		<< "It's a place where I can spam : " << info.email_address << std::endl
 		<< "Her/him phone number : " << info.phone_number << std::endl
-		<< "The date i have to remember : " << info.birthday_date << std::endl
+		<< "The date, i have to remember : " << info.birthday_date << std::endl
 		<< "I can do it whenever he/she wan : " << info.favorite_meal << std::endl
 		<< "I would remain silent : " << info.underwear_color << std::endl
 		<< "Seriously ?! : " << info.darkest_secret << std::endl;

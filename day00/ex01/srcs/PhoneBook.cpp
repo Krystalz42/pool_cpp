@@ -41,10 +41,9 @@ bool PhoneBook::addContact() {
 
 bool PhoneBook::searchContact() {
 	std::string			input;
-	static std::string	prompt;
+	static std::string	prompt = "To display a contact, enter an index between 0 and ";
 	static std::string	no_contact = "error: No contact in phonebook";
-	prompt += "To display a contact, enter an index between 0 and ";
-
+	
 	if (_current_contact_index != 0) {
 		displayContact();
 		std::cout << prompt << (_current_contact_index - 1) << std::endl << " > ";
