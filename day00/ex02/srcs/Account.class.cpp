@@ -114,7 +114,7 @@ bool Account::makeWithdrawal(int withdrawal) {
 		<< "index:" << _accountIndex << ";"
 		<< "p_amount" << _amount << ";";
 
-	if (withdrawal < _amount) {
+	if (withdrawal <= _amount) {
 		// withdrawal:34;amount:785;nb_withdrawals:1
 		std::cout
 			<< "withdrawal:" << withdrawal << ";"
