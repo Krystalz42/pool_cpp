@@ -40,10 +40,9 @@ bool PhoneBook::addContact() {
 }
 
 bool PhoneBook::searchContact() {
-	std::string			input;
-	static std::string	prompt;
-	static std::string	no_contact = "error: No contact in phonebook";
-	prompt += "To display a contact, enter an index between 0 and ";
+	std::string					input;
+	static std::string const	prompt = "To display a contact, enter an index between 0 and ";
+	static std::string const	no_contact = "error: No contact in phonebook";
 
 	if (_current_contact_index != 0) {
 		displayContact();
@@ -61,4 +60,10 @@ bool PhoneBook::searchContact() {
 
 /** Destructor **/
 
-PhoneBook::~PhoneBook() {};
+PhoneBook::~PhoneBook() {}
+
+std::ostream &operator<<(std::ostream &os, const PhoneBook &book) {
+	os << "_c: " << book._c << " _current_contact_index: "
+	   << book._current_contact_index << " t: " << book.t;
+	return os;
+};

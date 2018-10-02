@@ -21,15 +21,15 @@ int main() {
 		std::cout << question << std::endl;
 		std::cout << prompt;
 		std::getline(std::cin, input);
-		if (input.compare("ADD") == 0) {
+		if (input == "ADD") {
 			if (pb.addContact() == false)
 				std::cout << error_add << std::endl;
 		}
-		else if (input.compare("SEARCH") == 0) {
+		else if (input == "SEARCH") {
 			if (pb.searchContact() == false)
 				std::cout << error_search << std::endl;
 		}
-		else if (input.compare("EXIT") == 0 || std::cin.eof()) {
+		else if (input == "EXIT" || std::cin.eof()) {
 			std::cout << bye << std::endl;
 			return (0);
 		}
