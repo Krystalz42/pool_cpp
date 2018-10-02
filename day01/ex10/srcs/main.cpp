@@ -34,8 +34,6 @@ void	readFile(int argc, char **argv) {
 					std::cout << std::endl;
 				}
 				ifs.close();
-			} else {
-				strerror(errno);
 			}
 		}
 	}

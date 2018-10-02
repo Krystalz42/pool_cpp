@@ -78,6 +78,7 @@ CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 
 CFLAGS		= \
+		-Wall -Wextra -Wall		\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #

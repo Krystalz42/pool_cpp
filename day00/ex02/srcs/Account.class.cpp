@@ -54,7 +54,7 @@ void Account::_displayTimestamp(void) {
 		<< "_"
 		<< std::setw(2) << std::setfill('0') << now->tm_hour
 		<< std::setw(2) << std::setfill('0') << now->tm_min
-		< std::setw(2) << std::setfill('0') << now->tm_sec
+		<< std::setw(2) << std::setfill('0') << now->tm_sec
 		<< "] ";
 }
 

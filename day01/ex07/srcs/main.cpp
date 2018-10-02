@@ -34,7 +34,7 @@ int			main(int argc, char **argv) {
 	if (argc == 4 ) {
 		std::string  filename = argv[1];
 		std::ifstream		file (filename);
-		std::ofstream		file_replace (filename + ".replace");
+		std::ofstream		file_replace (filename + ".REPLACE");
 		if (file.is_open() && file_replace.is_open()) {
 				std::cout
 					<< "The "
@@ -52,7 +52,7 @@ int			main(int argc, char **argv) {
 			file_replace.close();
 		}
 	} else {
-		std::cerr << "We need to have \'./replace\' \'filename\' \'substring_to_replace\' \'string_that_you_re_replacing\'";
+		std::cerr << "We need to have \'./replace\' \'filename\' \'substring_to_replace\' \'string_that_you_re_replacing\'" << std::endl;
 	}
 	return (0);
 }
