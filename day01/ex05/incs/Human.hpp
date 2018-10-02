@@ -8,7 +8,7 @@ class Human {
 		Human();
 		~Human();
 		Brain& getBrain();
-		std::string  const identify();
+		std::string const identify();
 		
 	private:
 		Brain _b;

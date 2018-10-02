@@ -1,1 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ex05.dir/srcs/Brain.cpp.o CMakeFiles/ex05.dir/srcs/Human.cpp.o CMakeFiles/ex05.dir/srcs/main.cpp.o  -o ex05 

@@ -6,13 +6,21 @@
 
 std::string randomName() {
 	std::string random_name;	
-	int len = rand() % 30;
-    static char const alphanum[] =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz";
-
+	int len = rand() % 10;
+    static char const alpha_maj[] =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static char const consonant[] =
+        "bcdfghjklmnpqrstvwxz";
+	static char const vowel[] =
+        "aeiouy";
     for (int i = 0; i < len; ++i) {
-        random_name += alphanum[rand() % (sizeof(alphanum) - 1)];
+		if (i == 0)
+    	    random_name += alpha_maj[rand() % (sizeof(alpha_maj) - 1)];
+		else if (i % 3) {
+	        random_name += consonant[rand() % (sizeof(consonant) - 1)];
+		} else {
+	        random_name += vowel[rand() % (sizeof(vowel) - 1)];
+		}
     }
 	return random_name;
 }

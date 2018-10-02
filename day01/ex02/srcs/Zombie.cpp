@@ -24,12 +24,15 @@ Zombie::Zombie(std::string name, TypeAction type)
 		case SING:
 			_type_definition =  "sing";
 			break;
+		case DANCE:
+			_type_definition =  "dance";
+			break;
 	}
 
 
 	std::cout
 		<< _name << ": GrWoowoooW .. "
-		<< "ai wouill "
+		<< "aie wouill "
 		<< _type_definition
 		<< " !" << std::endl
 		<< "A beautifull student : Calm down "

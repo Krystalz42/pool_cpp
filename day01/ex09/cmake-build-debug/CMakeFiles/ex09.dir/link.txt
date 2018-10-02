@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ex09.dir/srcs/Logger.cpp.o CMakeFiles/ex09.dir/srcs/main.cpp.o  -o ex09 

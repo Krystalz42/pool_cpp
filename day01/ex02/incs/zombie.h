@@ -5,7 +5,8 @@ enum TypeAction {
 	RUN,
 	ATTACK,
 	EAT,
-	SING
+	SING,
+	DANCE
 };
 
 #endif //__ZOMBIE_H__

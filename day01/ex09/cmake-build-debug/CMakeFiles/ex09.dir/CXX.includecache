@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../incs/Logger.hpp
+fstream
+-
+
+/Users/alexandreroulin/pool_cpp/day01/ex09/srcs/Logger.cpp
+Logger.hpp
+-
+fstream
+-
+iomanip
+-
+iostream
+-
+sstream
+-
+
+/Users/alexandreroulin/pool_cpp/day01/ex09/srcs/main.cpp
+Logger.hpp
+-
+iostream
+-
+

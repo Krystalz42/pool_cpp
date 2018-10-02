@@ -7,13 +7,21 @@
 /** Constructor **/
 
 Zombie::Zombie() {
-	int len = rand() % 30;
-    static char const alphanum[] =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz";
-
+		int len = rand() % 10;
+    static char const alpha_maj[] =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    static char const consonant[] =
+        "bcdfghjklmnpqrstvwxz";
+	static char const vowel[] =
+        "aeiouy";
     for (int i = 0; i < len; ++i) {
-        _name += alphanum[rand() % (sizeof(alphanum) - 1)];
+		if (i == 0)
+    	    _name += alpha_maj[rand() % (sizeof(alpha_maj) - 1)];
+		else if (i % 3) {
+	        _name += consonant[rand() % (sizeof(consonant) - 1)];
+		} else {
+	        _name += vowel[rand() % (sizeof(vowel) - 1)];
+		}
     }
 
  	switch (static_cast<TypeAction>(rand() % 4))

@@ -14,7 +14,7 @@ Brain::Brain() {
 /** Public **/
 
 std::string Brain::identify() {
-    return this->addr.str();
+    return addr.str();
 }
 
 /** Private **/

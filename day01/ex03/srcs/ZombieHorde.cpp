@@ -7,7 +7,7 @@ ZombieHorde::ZombieHorde(int nu):
 	std::cout 
 		<< "A new horde incomming !! with "
 		<< nu
-		<< "zombie" << (nu > 1 ? "s" : "")
+		<< " zombie" << (nu > 1 ? "s" : "")
 		<< std::endl;
 	
 }
