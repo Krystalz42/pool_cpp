@@ -40,7 +40,7 @@ RM			= rm -rf
 # base prefix of the directory.                                                #
 # ---------------------------------------------------------------------------- #
 
-NAME		= fixed
+NAME		= operator
 
 SRCS = \
 		main.cpp			\
