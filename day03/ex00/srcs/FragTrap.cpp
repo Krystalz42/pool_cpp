@@ -65,7 +65,7 @@ void FragTrap::meleeAttack(std::string const & target) const {
 		<< " bolts." << std::endl;
 }
 void FragTrap::takeDamage(unsigned int amount) {
-	unsigned int damage_taken = amount - _armor_damage_reduction;
+	unsigned int damage_taken = (_armor_damage_reduction > amount ? 0 : amount - _armor_damage_reduction);
 	_hit_point -= (damage_taken > _hit_point ? _hit_point : damage_taken);
 	std::cout
 		<< "error 404:"

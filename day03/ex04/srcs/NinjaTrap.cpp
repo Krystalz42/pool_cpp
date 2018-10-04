@@ -18,15 +18,7 @@ NinjaTrap::NinjaTrap(std::string const &name) {
 		<< std::endl;
 }
 NinjaTrap::NinjaTrap(NinjaTrap const &ninja_trap) {
-	_name = ninja_trap._name;
-	_hit_point = ninja_trap._hit_point;
-	_max_hit_point = ninja_trap._max_hit_point;
-	_energyPoint = ninja_trap._energyPoint;
-	_max_energy_point = ninja_trap._max_energy_point;
-	level = ninja_trap.level;
-	_melee_attack_damage = ninja_trap._melee_attack_damage;
-	_ranged_attack_damage = ninja_trap._ranged_attack_damage;
-	_armor_damage_reduction = ninja_trap._armor_damage_reduction;
+	*this = ninja_trap;
 	std::cout
 		<< "A new NinjaTrap has been created, called "
 		<< "."
@@ -34,6 +26,14 @@ NinjaTrap::NinjaTrap(NinjaTrap const &ninja_trap) {
 }
 
 /** Public **/
+
+void NinjaTrap::meleeAttack(std::string const &target) const {
+	std::cout << "NinjaTrap melee attack" << target <<std::endl;
+}
+
+void NinjaTrap::rangedAttack(std::string const &target) const {
+	std::cout << "NinjaTrap ranged attack" << target << std::endl;
+}
 
 void NinjaTrap::ninjaShoebox(NinjaTrap const &t) {
 	std::cout
@@ -98,8 +98,4 @@ NinjaTrap	&NinjaTrap::operator=(NinjaTrap const &f) {
 
 NinjaTrap::~NinjaTrap() {
 	std::cout << "NinjaTrap: " << _name << " destroyed ..." << std::endl;	
-}
-
-void NinjaTrap::meleeAttack(std::string const &target) const {
-	ClapTrap::meleeAttack(target);
 }

@@ -6,6 +6,7 @@
 /** Constructor **/
 
 ScavTrap::ScavTrap() {
+	_name = "404";
 		std::cout
 		<< "A new ScavTrap has been created, called "
 		<< "."

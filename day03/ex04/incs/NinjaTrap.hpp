@@ -8,7 +8,7 @@
 
 class NinjaTrap : virtual public ClapTrap {
 	private:
-		void _defaultInitialization() override;
+		void _defaultInitialization() ;
 
 	public:
 		NinjaTrap();
@@ -18,7 +18,9 @@ class NinjaTrap : virtual public ClapTrap {
 
 		NinjaTrap	&operator=(NinjaTrap const &f);
 
-		void meleeAttack(std::string const &target) const override;
+	void rangedAttack(std::string const &target) const ;
+
+	void meleeAttack(std::string const &target) const ;
 		void ninjaShoebox(NinjaTrap const &t);
 		void ninjaShoebox(ClapTrap const &t);
 		void ninjaShoebox(ScavTrap const &t);

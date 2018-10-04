@@ -20,15 +20,7 @@ FragTrap::FragTrap(std::string const &name) {
 		<< std::endl;
 }
 FragTrap::FragTrap(FragTrap const &frag_trap) {
-	_name = frag_trap._name;
-	_hit_point = frag_trap._hit_point;
-	_max_hit_point = frag_trap._max_hit_point;
-	_energyPoint = frag_trap._energyPoint;
-	_max_energy_point = frag_trap._max_energy_point;
-	level = frag_trap.level;
-	_melee_attack_damage = frag_trap._melee_attack_damage;
-	_ranged_attack_damage = frag_trap._ranged_attack_damage;
-	_armor_damage_reduction = frag_trap._armor_damage_reduction;
+	*this = frag_trap;
 	std::cout
 		<< "A new FragTrap has been created, called "
 		<< "."
@@ -36,6 +28,15 @@ FragTrap::FragTrap(FragTrap const &frag_trap) {
 }
 
 /** Public **/
+
+void FragTrap::rangedAttack(std::string const &target) const {
+	std::cout << " Frag trap ranged attack" << target<< std::endl;
+}
+
+void FragTrap::meleeAttack(std::string const &target) const {
+	std::cout << " Frag trap melee attack" << target << std::endl;
+}
+
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target) {
 	static std::string const random_attack[] = {
@@ -98,8 +99,4 @@ FragTrap	&FragTrap::operator=(FragTrap const &f) {
 
 FragTrap::~FragTrap() {
 	std::cout << "FragTrap: " << _name << " destroyed ..." << std::endl;	
-}
-
-void FragTrap::rangedAttack(std::string const &target) const {
-	ClapTrap::rangedAttack(target);
 }

@@ -6,7 +6,7 @@
 
 class FragTrap : virtual public ClapTrap {
 	private:
-		void _defaultInitialization() override;
+		void _defaultInitialization() ;
 
 public:
 		FragTrap();
@@ -16,7 +16,9 @@ public:
 
 		FragTrap	&operator=(FragTrap const &f);
 
-		void rangedAttack(std::string const &target) const override;
+	void meleeAttack(std::string const &target) const ;
+
+	void rangedAttack(std::string const &target) const ;
 		void vaulthunter_dot_exe(std::string const & target);
 };
 
