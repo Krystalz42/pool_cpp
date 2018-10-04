@@ -6,7 +6,7 @@
 
 class FragTrap : public ClapTrap {
 	private:
-		void _defaultInitialization();
+		void _defaultInitialization() override;
 
 	public:
 		FragTrap();

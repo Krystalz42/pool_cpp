@@ -4,6 +4,7 @@
 /** Constructor **/
 
 FragTrap::FragTrap() {
+	_defaultInitialization();
 	std::cout
 		<< "A new FragTrap has been created, called "
 		<< "."
@@ -11,6 +12,7 @@ FragTrap::FragTrap() {
 }
 FragTrap::FragTrap(std::string const &name) {
 	_name = name;
+	_defaultInitialization();
 	std::cout
 		<< "A new FragTrap has been created, called "
 		<< name

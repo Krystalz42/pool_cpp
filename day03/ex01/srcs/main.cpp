@@ -5,23 +5,17 @@
 
 int main () {
 	ScavTrap black_panther("Black Panther");
-	ScavTrap white_peguin("White Penguin");
+	ScavTrap white_penguin("White Penguin");
 
 	FragTrap red_rabbit("Red Rabbit");
 
 	black_panther.challengeNewcomer();
-	white_peguin.challengeNewcomer();
-	black_panther.challengeNewcomer();
-	white_peguin.challengeNewcomer();
-	black_panther.challengeNewcomer();
-	white_peguin.challengeNewcomer();
-	black_panther.challengeNewcomer();
-	white_peguin.challengeNewcomer();
+	white_penguin.challengeNewcomer();
 
 	red_rabbit.meleeAttack(black_panther.getName());
 	black_panther.takeDamage(30);
-	red_rabbit.rangedAttack(white_peguin.getName());
-	white_peguin.takeDamage(30);
+	red_rabbit.rangedAttack(white_penguin.getName());
+	white_penguin.takeDamage(30);
 
 	
 

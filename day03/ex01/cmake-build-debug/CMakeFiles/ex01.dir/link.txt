@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ex01.dir/srcs/FragTrap.cpp.o CMakeFiles/ex01.dir/srcs/main.cpp.o CMakeFiles/ex01.dir/srcs/ScavTrap.cpp.o  -o ex01 

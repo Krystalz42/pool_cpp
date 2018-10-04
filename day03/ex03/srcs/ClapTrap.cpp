@@ -6,7 +6,7 @@
 /** Constructor **/
 
 ClapTrap::ClapTrap() {
-	_name = "404_UNKNOW";
+	_name = "404_UNKNOWN";
 	_defaultInitialization();
 	std::cout
 		<< "A new ClapTrap has been created, called "

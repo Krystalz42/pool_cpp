@@ -73,7 +73,7 @@ void		incrementArgument(std::string &arg) {
 
 Fixed			sum(Fixed & f1, Fixed & f2, int level) { op(f1,f2,"+", level); return f1 + f2; }
 Fixed			minus(Fixed & f1, Fixed & f2, int level) {  op(f1,f2,"-", level); return f1 - f2; }
-Fixed			div(Fixed & f1, Fixed & f2, int level) {  op(f1,f2,"/", level); return f1 / f2; }
+Fixed			div(Fixed & f1, Fixed & f2, int level) {  op(f1,f2,"/", level); if (f2.toFloat() == 0) error("Divide by zero."); return f1 / f2; }
 Fixed			times(Fixed & f1, Fixed & f2, int level) {  op(f1,f2,"*", level); return f1 * f2; }
 
 /** Getter next float && operation in stream **/

@@ -6,13 +6,17 @@
 /** Constructor **/
 
 ScavTrap::ScavTrap() {
-		std::cout
+	_name = "404_UNKNOWN";
+	_defaultInitialization();
+	std::cout
 		<< "A new ScavTrap has been created, called "
+		<< _name
 		<< "."
 		<<std::endl;
 }
 ScavTrap::ScavTrap(std::string const &name) {
 		_name = name;
+		_defaultInitialization();
 		std::cout
 		<< "A new ScavTrap has been created, called "
 		<< _name

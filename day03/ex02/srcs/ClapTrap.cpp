@@ -6,7 +6,7 @@
 /** Constructor **/
 
 ClapTrap::ClapTrap() {
-	_name = "404_UNKNOW";
+	_name = "404_UNKNOWN";
 	_defaultInitialization();
 	std::cout
 		<< "A new ClapTrap has been created, called "
@@ -133,5 +133,5 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &f) {
 /** Destructor **/
 
 ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap: " << _name << " destroyed ..." << std::endl;	
+	std::cout << "ClapTrap: " << _name << " destroyed ..." << std::endl;
 }

@@ -6,13 +6,15 @@
 /** Constructor **/
 
 ScavTrap::ScavTrap() {
+	_defaultInitialization();
 		std::cout
 		<< "A new ScavTrap has been created, called "
 		<< "."
 		<<std::endl;
 }
 ScavTrap::ScavTrap(std::string const &name) {
-		_name = name;
+	_defaultInitialization();
+	_name = name;
 		std::cout
 		<< "A new ScavTrap has been created, called "
 		<< _name

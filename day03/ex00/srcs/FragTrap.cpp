@@ -6,10 +6,10 @@
 /** Constructor **/
 
 FragTrap::FragTrap() {
-	_name = "404_UNKNOW";
+	_name = "404_UNKNOWN";
 	_defaultInitialization();
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new FragTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
@@ -19,7 +19,7 @@ FragTrap::FragTrap(std::string const &name) :
 	_name(name) {
 	_defaultInitialization();
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new FragTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
@@ -31,12 +31,12 @@ FragTrap::FragTrap(FragTrap const &frag_trap) {
 	_max_hit_point = frag_trap._max_hit_point;
 	_energyPoint = frag_trap._energyPoint;
 	_max_energy_point = frag_trap._max_energy_point;
-	level = frag_trap.level;
+	_level = frag_trap._level;
 	_melee_attack_damage = frag_trap._melee_attack_damage;
 	_ranged_attack_damage = frag_trap._ranged_attack_damage;
 	_armor_damage_reduction = frag_trap._armor_damage_reduction;
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new FragTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
@@ -135,7 +135,7 @@ void FragTrap::_defaultInitialization() {
 	_max_hit_point = 100;
 	_energyPoint = 100;
 	_max_energy_point = 100;
-	level = 1;
+	_level = 1;
 	_melee_attack_damage = 30;
 	_ranged_attack_damage = 20;
 	_armor_damage_reduction = 5;
@@ -149,7 +149,7 @@ FragTrap	&FragTrap::operator=(FragTrap const &f) {
 		_max_hit_point = f._max_hit_point;
 		_energyPoint = f._energyPoint;
 		_max_energy_point = f._max_energy_point;
-		level = f.level;
+		_level = f._level;
 		_melee_attack_damage = f._melee_attack_damage;
 		_ranged_attack_damage = f._ranged_attack_damage;
 		_armor_damage_reduction = f._armor_damage_reduction;
