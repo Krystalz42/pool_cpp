@@ -1,42 +1,42 @@
-#include <FragTrap.hpp>
+#include <ClapTrap.hpp>
 #include <iostream>
 
 /** Static **/
 
 /** Constructor **/
 
-FragTrap::FragTrap() {
+ClapTrap::ClapTrap() {
 	_name = "404_UNKNOW";
 	_defaultInitialization();
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new ClapTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
 }
 
-FragTrap::FragTrap(std::string const &name) :
+ClapTrap::ClapTrap(std::string const &name) :
 	_name(name) {
 	_defaultInitialization();
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new ClapTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
 }
 
-FragTrap::FragTrap(FragTrap const &frag_trap) {
-	_name = frag_trap._name;
-	_hit_point = frag_trap._hit_point;
-	_max_hit_point = frag_trap._max_hit_point;
-	_energyPoint = frag_trap._energyPoint;
-	_max_energy_point = frag_trap._max_energy_point;
-	level = frag_trap.level;
-	_melee_attack_damage = frag_trap._melee_attack_damage;
-	_ranged_attack_damage = frag_trap._ranged_attack_damage;
-	_armor_damage_reduction = frag_trap._armor_damage_reduction;
+ClapTrap::ClapTrap(ClapTrap const &clap_trap) {
+	_name = clap_trap._name;
+	_hit_point = clap_trap._hit_point;
+	_max_hit_point = clap_trap._max_hit_point;
+	_energyPoint = clap_trap._energyPoint;
+	_max_energy_point = clap_trap._max_energy_point;
+	level = clap_trap.level;
+	_melee_attack_damage = clap_trap._melee_attack_damage;
+	_ranged_attack_damage = clap_trap._ranged_attack_damage;
+	_armor_damage_reduction = clap_trap._armor_damage_reduction;
 	std::cout
-		<< "A new robot has been created, called "
+		<< "A new ClapTrap has been created, called "
 		<< _name
 		<< "."
 		<<std::endl;
@@ -44,7 +44,7 @@ FragTrap::FragTrap(FragTrap const &frag_trap) {
 
 /** Public **/
 
-void FragTrap::rangedAttack(std::string const & target) const {
+void ClapTrap::rangedAttack(std::string const & target) const {
 	std::cout
 		<< "KrrrKrr "
 		<< _name
@@ -54,7 +54,7 @@ void FragTrap::rangedAttack(std::string const & target) const {
 		<< _ranged_attack_damage
 		<< " bolts." << std::endl;
 }
-void FragTrap::meleeAttack(std::string const & target) const {
+void ClapTrap::meleeAttack(std::string const & target) const {
 		std::cout
 		<< "KrrrKrr "
 		<< _name
@@ -64,7 +64,7 @@ void FragTrap::meleeAttack(std::string const & target) const {
 		<< _melee_attack_damage
 		<< " bolts." << std::endl;
 }
-void FragTrap::takeDamage(unsigned int amount) {
+void ClapTrap::takeDamage(unsigned int amount) {
 	unsigned int damage_taken = amount - _armor_damage_reduction;
 	_hit_point -= (damage_taken > _hit_point ? _hit_point : damage_taken);
 	std::cout
@@ -81,7 +81,7 @@ void FragTrap::takeDamage(unsigned int amount) {
 	std::cout << std::endl;
 
 }
-void FragTrap::beRepaired(unsigned int amount) {
+void ClapTrap::beRepaired(unsigned int amount) {
 	unsigned int hit_point_temp = (amount + _hit_point > _max_hit_point ? _max_energy_point : amount + _hit_point);
 	std::cout
 		<< "Ohh i find "
@@ -97,40 +97,13 @@ void FragTrap::beRepaired(unsigned int amount) {
 	std::cout << std::endl;
 }
 
-void FragTrap::vaulthunter_dot_exe(std::string const & target) {
-	static std::string const random_attack[] = {
-		" sing with ",
-		" dance with ",
-		" make a infite loop ",
-		" launches a virus on ",
-		" debug itself.",
-	};
-	if (_energyPoint == 0) {
-		std::cout
-		<< "KrrrKrr "
-		<< _name
-		<< " will"
-		<< random_attack[4]
-		<< "[SIGTRAP:5]"
-		<< std::endl;
-	} else {
-		_energyPoint -= 25;
-		std::cout
-			<< "KrrrKrr "
-			<< _name
-			<< " will"
-			<< random_attack[rand() % 4]
-			<< target << std::endl;
-	}
-}
-
-std::string const &FragTrap::getName() const {
+std::string const &ClapTrap::getName() const {
 	return _name;
 }
 
 /** Private **/
 
-void FragTrap::_defaultInitialization() {
+void ClapTrap::_defaultInitialization() {
 	_hit_point = 100;
 	_max_hit_point = 100;
 	_energyPoint = 100;
@@ -142,7 +115,7 @@ void FragTrap::_defaultInitialization() {
 }
 /** Operator **/
 
-FragTrap	&FragTrap::operator=(FragTrap const &f) {
+ClapTrap	&ClapTrap::operator=(ClapTrap const &f) {
 	if (&f != this) {
 		_name = f._name;
 		_hit_point = f._hit_point;
@@ -159,6 +132,6 @@ FragTrap	&FragTrap::operator=(FragTrap const &f) {
 
 /** Destructor **/
 
-FragTrap::~FragTrap() {
-	std::cout << _name << " destroyed ..." << std::endl;	
+ClapTrap::~ClapTrap() {
+	std::cout << "ClapTrap: " << _name << " destroyed ..." << std::endl;	
 }

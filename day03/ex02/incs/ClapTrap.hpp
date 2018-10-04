@@ -1,10 +1,10 @@
-#ifndef __SCAV_TRAP_HPP__
-#define __SCAV_TRAP_HPP__
+#ifndef __CLAP_TRAP_HPP
+#define __CLAP_TRAP_HPP
 
 #include <string>
 
-class ScavTrap {
-	private:
+class ClapTrap {
+	protected:
 		std::string _name;
 		unsigned int _hit_point;
 		unsigned int _max_hit_point;
@@ -17,18 +17,18 @@ class ScavTrap {
 		void _defaultInitialization();
 
 	public:
-		ScavTrap();
-		ScavTrap(std::string const &name);
-		ScavTrap(ScavTrap const &scav_trap);
-		~ScavTrap();
+		ClapTrap();
+		ClapTrap(std::string const &name);
+		ClapTrap(ClapTrap const &clap_trap);
+		~ClapTrap();
 
-		ScavTrap	&operator=(ScavTrap const &f);
+		ClapTrap	&operator=(ClapTrap const &f);
 
-		void challengeNewcomer();
 		void rangedAttack(std::string const & target) const;
 		void meleeAttack(std::string const & target) const;
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		std::string const &getName() const;
 };
-#endif //__SCAV_TRAP_HPP__
+
+#endif //__CLAP_TRAP_HPP

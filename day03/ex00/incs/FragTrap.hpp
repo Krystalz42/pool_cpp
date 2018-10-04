@@ -21,6 +21,9 @@ class FragTrap {
 		FragTrap(std::string const &name);
 		FragTrap(FragTrap const &frag_trap);
 		~FragTrap();
+
+		FragTrap	&operator=(FragTrap const &f);
+
 		void vaulthunter_dot_exe(std::string const & target);
 		void rangedAttack(std::string const & target) const;
 		void meleeAttack(std::string const & target) const;
