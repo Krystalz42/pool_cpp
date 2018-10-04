@@ -17,7 +17,7 @@ void log(int level, std::string msg, char c) {
 		std::cout << "\t";
 	}
 	std::cout
-		<< "Lvl : "
+		<< "Lvl  "
 		<< level
 		<< "  On character ["
 		<< c
