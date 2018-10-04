@@ -7,24 +7,31 @@
 #include <FragTrap.hpp>
 
 class NinjaTrap : virtual public ClapTrap {
-	private:
-		void _defaultInitialization() ;
+private:
+	void _defaultInitialization();
 
-	public:
-		NinjaTrap();
-		NinjaTrap(std::string const &name);
-		NinjaTrap(NinjaTrap const &frag_trap);
-		~NinjaTrap();
+public:
+	NinjaTrap();
 
-		NinjaTrap	&operator=(NinjaTrap const &f);
+	NinjaTrap(std::string const &name);
 
-	void rangedAttack(std::string const &target) const ;
+	NinjaTrap(NinjaTrap const &frag_trap);
 
-	void meleeAttack(std::string const &target) const ;
-		void ninjaShoebox(NinjaTrap const &t);
-		void ninjaShoebox(ClapTrap const &t);
-		void ninjaShoebox(ScavTrap const &t);
-		void ninjaShoebox(FragTrap const &t);
+	~NinjaTrap();
+
+	NinjaTrap &operator=(NinjaTrap const &f);
+
+	void rangedAttack(std::string const &target) const;
+
+	void meleeAttack(std::string const &target) const;
+
+	void ninjaShoebox(NinjaTrap const &t);
+
+	void ninjaShoebox(ClapTrap const &t);
+
+	void ninjaShoebox(ScavTrap const &t);
+
+	void ninjaShoebox(FragTrap const &t);
 };
 
 #endif //__NINJA_TRAP_HPP__

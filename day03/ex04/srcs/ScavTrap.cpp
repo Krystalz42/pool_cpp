@@ -6,51 +6,47 @@
 /** Constructor **/
 
 ScavTrap::ScavTrap() {
+	_defaultInitialization();
 	_name = "404";
-		std::cout
-		<< "A new ScavTrap has been created, called "
-		<< "."
-		<<std::endl;
-}
-ScavTrap::ScavTrap(std::string const &name) {
-		_name = name;
-		std::cout
-		<< "A new ScavTrap has been created, called "
-		<< _name
-		<< "."
-		<<std::endl;
-}
-ScavTrap::ScavTrap(ScavTrap const &scav_trap) {
-	_name = scav_trap._name;
-	_hit_point = scav_trap._hit_point;
-	_max_hit_point = scav_trap._max_hit_point;
-	_energyPoint = scav_trap._energyPoint;
-	_max_energy_point = scav_trap._max_energy_point;
-	level = scav_trap.level;
-	_melee_attack_damage = scav_trap._melee_attack_damage;
-	_ranged_attack_damage = scav_trap._ranged_attack_damage;
-	_armor_damage_reduction = scav_trap._armor_damage_reduction;
 	std::cout
-		<< "A new ScavTrap has been created, called "
-		<< _name
-		<< "."
-		<<std::endl;
+			<< "A new ScavTrap has been created, called "
+			<< "."
+			<< std::endl;
+}
+
+ScavTrap::ScavTrap(std::string const &name) {
+	_name = name;
+	_defaultInitialization();
+	std::cout
+			<< "A new ScavTrap has been created, called "
+			<< _name
+			<< "."
+			<< std::endl;
+}
+
+ScavTrap::ScavTrap(ScavTrap const &scav_trap) {
+	*this = scav_trap;
+	std::cout
+			<< "A new ScavTrap has been created, called "
+			<< _name
+			<< "."
+			<< std::endl;
 }
 
 /** Public **/
 
 void ScavTrap::challengeNewcomer() {
 	static std::string const random_challenge[] = {
-		"I'm going to unscrew you.",
-		"I'm going to spill a bucket of water on you/",
-		"My processor is more powerful than you.",
-		"You're like a commodor 64.",
-		"I'm a linux you're just a macos.",
+			"I'm going to unscrew you.",
+			"I'm going to spill a bucket of water on you/",
+			"My processor is more powerful than you.",
+			"You're like a commodor 64.",
+			"I'm a linux you're just a macos.",
 	};
 
 	std::cout
-		<< random_challenge[rand() % 5]
-		<< std::endl;
+			<< random_challenge[rand() % 5]
+			<< std::endl;
 }
 
 
@@ -66,9 +62,10 @@ void ScavTrap::_defaultInitialization() {
 	_ranged_attack_damage = 15;
 	_armor_damage_reduction = 3;
 }
+
 /** Operator **/
 
-ScavTrap	&ScavTrap::operator=(ScavTrap const &f) {
+ScavTrap &ScavTrap::operator=(ScavTrap const &f) {
 	if (&f != this) {
 		_name = f._name;
 		_hit_point = f._hit_point;
@@ -86,7 +83,7 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &f) {
 /** Destructor **/
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap: " << _name << " destroyed ..." << std::endl;	
+	std::cout << "ScavTrap: " << _name << " destroyed ..." << std::endl;
 
 }
 

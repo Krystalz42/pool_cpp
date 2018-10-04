@@ -26,15 +26,7 @@ ClapTrap::ClapTrap(std::string const &name) :
 }
 
 ClapTrap::ClapTrap(ClapTrap const &clap_trap) {
-	_name = clap_trap._name;
-	_hit_point = clap_trap._hit_point;
-	_max_hit_point = clap_trap._max_hit_point;
-	_energyPoint = clap_trap._energyPoint;
-	_max_energy_point = clap_trap._max_energy_point;
-	level = clap_trap.level;
-	_melee_attack_damage = clap_trap._melee_attack_damage;
-	_ranged_attack_damage = clap_trap._ranged_attack_damage;
-	_armor_damage_reduction = clap_trap._armor_damage_reduction;
+	*this = clap_trap;
 	std::cout
 		<< "A new ClapTrap has been created, called "
 		<< _name

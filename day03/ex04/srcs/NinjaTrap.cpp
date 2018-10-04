@@ -4,6 +4,8 @@
 /** Constructor **/
 
 NinjaTrap::NinjaTrap() {
+	_name = "404";
+	_defaultInitialization();
 	std::cout
 		<< "A new NinjaTrap has been created, called "
 		<< "."
@@ -11,6 +13,7 @@ NinjaTrap::NinjaTrap() {
 }
 NinjaTrap::NinjaTrap(std::string const &name) {
 	_name = name;
+	_defaultInitialization();
 	std::cout
 		<< "A new NinjaTrap has been created, called "
 		<< name

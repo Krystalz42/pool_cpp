@@ -4,6 +4,7 @@
 /** Constructor **/
 
 FragTrap::FragTrap() {
+	_name = "404";
 	_defaultInitialization();
 	std::cout
 		<< "A new FragTrap has been created, called "

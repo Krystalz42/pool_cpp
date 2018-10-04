@@ -5,6 +5,8 @@
 /** Constructor **/
 
 SuperTrap::SuperTrap() : ClapTrap(), FragTrap(), NinjaTrap() {
+	_name = "404";
+	_defaultInitialization();
 	std::cout
 		<< "A new SuperTrap has been created, called "
 		<< _max_hit_point
@@ -14,6 +16,7 @@ SuperTrap::SuperTrap() : ClapTrap(), FragTrap(), NinjaTrap() {
 SuperTrap::SuperTrap(std::string const &name)
 	: ClapTrap(), FragTrap(), NinjaTrap() {
 	_name = name;
+	_defaultInitialization();
 	std::cout
 		<< "A new ScavTrap has been created, called "
 		<< _max_hit_point

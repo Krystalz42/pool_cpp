@@ -26,17 +26,9 @@ FragTrap::FragTrap(std::string const &name) :
 }
 
 FragTrap::FragTrap(FragTrap const &frag_trap) {
-	_name = frag_trap._name;
-	_hit_point = frag_trap._hit_point;
-	_max_hit_point = frag_trap._max_hit_point;
-	_energyPoint = frag_trap._energyPoint;
-	_max_energy_point = frag_trap._max_energy_point;
-	level = frag_trap.level;
-	_melee_attack_damage = frag_trap._melee_attack_damage;
-	_ranged_attack_damage = frag_trap._ranged_attack_damage;
-	_armor_damage_reduction = frag_trap._armor_damage_reduction;
+	*this = frag_trap;
 	std::cout
-		<< "A new FragTrap has been created, called "
+		<< "A new FragTrap has been copy, called "
 		<< _name
 		<< "."
 		<<std::endl;

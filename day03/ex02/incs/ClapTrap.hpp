@@ -15,7 +15,7 @@ class ClapTrap {
 		unsigned int _ranged_attack_damage;
 		unsigned int _armor_damage_reduction;
 
-		virtual void _defaultInitialization();
+		void _defaultInitialization();
 
 	public:
 		ClapTrap();

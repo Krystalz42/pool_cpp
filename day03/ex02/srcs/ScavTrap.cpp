@@ -22,15 +22,7 @@ ScavTrap::ScavTrap(std::string const &name) {
 		<<std::endl;
 }
 ScavTrap::ScavTrap(ScavTrap const &scav_trap) {
-	_name = scav_trap._name;
-	_hit_point = scav_trap._hit_point;
-	_max_hit_point = scav_trap._max_hit_point;
-	_energyPoint = scav_trap._energyPoint;
-	_max_energy_point = scav_trap._max_energy_point;
-	level = scav_trap.level;
-	_melee_attack_damage = scav_trap._melee_attack_damage;
-	_ranged_attack_damage = scav_trap._ranged_attack_damage;
-	_armor_damage_reduction = scav_trap._armor_damage_reduction;
+	*this = scav_trap;
 	std::cout
 		<< "A new ScavTrap has been created, called "
 		<< _name

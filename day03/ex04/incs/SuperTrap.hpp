@@ -6,20 +6,23 @@
 #include <NinjaTrap.hpp>
 
 class SuperTrap : virtual public FragTrap, virtual public NinjaTrap {
-	private:
-		void _defaultInitialization();
+private:
+	void _defaultInitialization();
 
-	public:
-		SuperTrap();
-		SuperTrap(std::string const &name);
-		SuperTrap(SuperTrap const &frag_trap);
-		~SuperTrap();
+public:
+	SuperTrap();
 
-	void rangedAttack(std::string const &target) const ;
+	SuperTrap(std::string const &name);
 
-	void meleeAttack(std::string const &target) const ;
+	SuperTrap(SuperTrap const &frag_trap);
 
-	SuperTrap	&operator=(SuperTrap const &f);
+	~SuperTrap();
+
+	void rangedAttack(std::string const &target) const;
+
+	void meleeAttack(std::string const &target) const;
+
+	SuperTrap &operator=(SuperTrap const &f);
 };
 
 #endif //__SUPER_TRAP_HPP__
