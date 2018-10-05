@@ -83,6 +83,7 @@ CPPFLAGS	= \
 
 CFLAGS		= \
 			  -Wall -Werror -Wextra					\
+				-std=c++11					\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
