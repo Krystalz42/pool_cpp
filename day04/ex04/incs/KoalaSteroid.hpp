@@ -1,0 +1,8 @@
+//
+// Created by Alexandre ROULIN on 06/10/2018.
+//
+
+#ifndef EX04_KOALASTEROID_HPP
+#define EX04_KOALASTEROID_HPP
+
+#endif //EX04_KOALASTEROID_HPP
