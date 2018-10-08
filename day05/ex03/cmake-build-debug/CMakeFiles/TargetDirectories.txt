@@ -1,0 +1,3 @@
+/Users/alexandreroulin/pool_cpp/day05/ex03/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alexandreroulin/pool_cpp/day05/ex03/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alexandreroulin/pool_cpp/day05/ex03/cmake-build-debug/CMakeFiles/ex00.dir
