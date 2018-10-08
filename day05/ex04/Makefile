@@ -40,9 +40,18 @@ RM			= rm -rf
 # base prefix of the directory.                                                #
 # ---------------------------------------------------------------------------- #
 
-NAME		= 
+NAME		= bureaucrat_can_sign
 
 SRCS = \
+		main.cpp			\
+		Bureaucrat.cpp		\
+		Form.cpp			\
+		PresidentialPardonForm.cpp	\
+        RobotomyRequestForm.cpp		\
+        ShrubberyCreationForm.cpp	\
+        Intern.cpp					\
+        OfficeBlock.cpp				\
+
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
 # ---------------------------------------------------------------------------- #
@@ -77,8 +86,8 @@ CPPFLAGS	= \
 			  -I$(DIR_INCS)							\
 
 CFLAGS		= \
-			  -Wall -Werror -Wextra					\
-				-std=c++98					\
+				-std=c++98								\
+				-Wall -Werror -Wextra					\
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #
