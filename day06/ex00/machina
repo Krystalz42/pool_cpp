@@ -1,0 +1,16 @@
+a
+1
+inf
+nan
++inf
+-inf
+2147483648
+Salut
+42
+42.0f
+27
+0
+CMakeLists.txt Makefile cmake-build-debug incs machina scalar_conversion srcs
+-inff
++inff
+nanf
