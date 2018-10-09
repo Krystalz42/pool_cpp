@@ -104,6 +104,20 @@ const char *Form::GradeTooHighException::what() const throw() {
 	return "Grade too high";
 }
 
+Form::GradeTooHighException::GradeTooHighException(
+		const Form::GradeTooHighException &g) {
+	*this = g;
+
+}
+
+Form::GradeTooHighException &
+Form::GradeTooHighException::operator=(const Form::GradeTooHighException &g) {
+	if (this != &g) {
+
+	}
+	return *this;
+}
+
 Form::GradeTooLowException::GradeTooLowException() throw() {
 
 }
@@ -114,6 +128,20 @@ Form::GradeTooLowException::~GradeTooLowException() throw() {
 
 const char *Form::GradeTooLowException::what() const throw() {
 	return "Grade too low";
+}
+
+Form::GradeTooLowException::GradeTooLowException(
+		const Form::GradeTooLowException &g) {
+
+	*this = g;
+}
+
+Form::GradeTooLowException &
+Form::GradeTooLowException::operator=(const Form::GradeTooLowException &g) {
+	if (this != &g) {
+
+	}
+	return *this;
 }
 
 /** Destructor **/

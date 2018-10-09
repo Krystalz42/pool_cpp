@@ -35,12 +35,20 @@ public:
 
 		virtual ~GradeTooHighException() throw();
 
+		GradeTooHighException(GradeTooHighException const &g);
+
+		GradeTooHighException &operator=(GradeTooHighException const &g);
+
 		virtual const char *what() const throw();
 	};
 
 	class GradeTooLowException : public std::exception {
 	public:
 		GradeTooLowException() throw();
+
+		GradeTooLowException(GradeTooLowException const &g);
+
+		GradeTooLowException &operator=(GradeTooLowException const &g);
 
 		virtual ~GradeTooLowException() throw();
 
@@ -52,6 +60,7 @@ private:
 
 	std::string const _name;
 	unsigned int _grade;
+
 	Bureaucrat();
 
 };

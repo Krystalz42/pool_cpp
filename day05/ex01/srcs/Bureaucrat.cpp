@@ -71,6 +71,31 @@ Bureaucrat::GradeTooHighException::~GradeTooHighException() throw() {
 const char *Bureaucrat::GradeTooHighException::what() const throw() {
 	return "Grade too high.";
 }
+Bureaucrat::GradeTooLowException::GradeTooLowException(
+		const Bureaucrat::GradeTooLowException &g) {
+	if (this != &g) {
+
+	}
+}
+
+Bureaucrat::GradeTooLowException &Bureaucrat::GradeTooLowException::operator=(
+		const Bureaucrat::GradeTooLowException &g) {
+	if (this != &g) {
+
+	}
+	return *this;
+}Bureaucrat::GradeTooHighException &Bureaucrat::GradeTooHighException::operator=(
+		const Bureaucrat::GradeTooHighException &g) {
+	if (this != &g) {
+
+	}
+	return *this;
+}
+
+Bureaucrat::GradeTooHighException::GradeTooHighException(
+		const Bureaucrat::GradeTooHighException &g) {
+	*this = g;
+}
 
 Bureaucrat::GradeTooLowException::GradeTooLowException() throw() {
 
