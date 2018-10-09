@@ -11,14 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b25b432-21be-475e-8896-6fd415a80074" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incs/OfficeBlock.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound/robot.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srcs/OfficeBlock.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex03/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-    </list>
+    <list default="true" id="1b25b432-21be-475e-8896-6fd415a80074" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +24,7 @@
     <session id="219840905">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -38,8 +32,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="18" />
-          <entry key="cpp" value="637" />
-          <entry key="hpp" value="405" />
+          <entry key="cpp" value="695" />
+          <entry key="hpp" value="430" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -47,7 +41,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="2" />
           <entry key="Doxygen file" value="4" />
-          <entry key="ObjectiveC" value="1038" />
+          <entry key="ObjectiveC" value="1121" />
           <entry key="PLAIN_TEXT" value="18" />
         </counts>
       </usages-collector>
@@ -68,11 +62,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srcs/OfficeBlock.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="105" column="69" selection-start-line="105" selection-start-column="69" selection-end-line="105" selection-end-column="69" />
+            <state relative-caret-position="413">
+              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="e#53#72#0" expanded="true" />
               </folding>
@@ -105,14 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/srcs/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-              <folding>
-                <element signature="e#2#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -148,8 +139,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/incs/OfficeBlock.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="422">
+              <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
               <folding>
                 <element signature="e#112#137#0" expanded="true" />
               </folding>
@@ -182,9 +173,9 @@
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/srcs/Intern.cpp" />
         <option value="$PROJECT_DIR$/srcs/Bureaucrat.cpp" />
-        <option value="$PROJECT_DIR$/srcs/main.cpp" />
         <option value="$PROJECT_DIR$/incs/OfficeBlock.hpp" />
         <option value="$PROJECT_DIR$/srcs/OfficeBlock.cpp" />
+        <option value="$PROJECT_DIR$/srcs/main.cpp" />
       </list>
     </option>
   </component>
@@ -277,12 +268,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539027534084</updated>
-      <workItem from="1539027535159" duration="3564000" />
+      <workItem from="1539027535159" duration="3923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3564000" />
+    <option name="totallyTimeSpent" value="3923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="933" height="900" extended-state="6" />
@@ -363,20 +354,10 @@
         <state relative-caret-position="-1134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="e#2#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/incs/OfficeBlock.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        <state relative-caret-position="422">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
           <folding>
             <element signature="e#112#137#0" expanded="true" />
           </folding>
@@ -385,11 +366,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/OfficeBlock.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="105" column="69" selection-start-line="105" selection-start-column="69" selection-end-line="105" selection-end-column="69" />
+        <state relative-caret-position="413">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="e#53#72#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="5" />
         </state>
       </provider>
     </entry>
