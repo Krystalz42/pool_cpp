@@ -85,8 +85,6 @@ int ScalarConversion::convertToInt() {
 	} else {
 		if (isnan(_d) || !std::isdigit(_s[0]))
 			throw ConversionError("impossible ");
-		if (_d > INT_MAX || _d < INT_MIN)
-			throw ConversionError("out of range ");
 	}
 	return static_cast<int>(_d);
 }
