@@ -74,7 +74,10 @@ void Array<T>::print() const {
 template<typename T>
 Array<T> &Array<T>::operator=(Array<T> const &array) {
 	if (this != &array) {
-
+		_size = array._size;
+		for (unsigned int index =0; index < _size; index++) {
+			_array[index] = array._array[index];
+		}
 	}
 	return *this;
 }
