@@ -93,7 +93,7 @@ T &Array<T>::operator[](unsigned int element) {
 
 template<typename T>
 Array<T>::~Array() {
-
+	delete [] _array;
 }
 
 template<typename T>
