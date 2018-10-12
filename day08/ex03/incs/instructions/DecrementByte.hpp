@@ -9,8 +9,11 @@
 
 class DecrementByte : public virtual IExecute {
 public:
-	virtual void
-	execute(std::list<char> *list, std::list<char>::iterator *it) const;
+	DecrementByte();
+	~DecrementByte();
+	DecrementByte(DecrementByte const &);
+	DecrementByte &operator=(DecrementByte const &);
+	virtual void execute(std::list<char> *list, std::list<char>::iterator *it) const;
 
 };
 

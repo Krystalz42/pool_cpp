@@ -5,6 +5,20 @@
 #include <iostream>
 #include "instructions/IncrementPointer.hpp"
 
+/** Static **/
+/** Constructor **/
+
+IncrementPointer::IncrementPointer() {
+
+}
+
+IncrementPointer::IncrementPointer(IncrementPointer const &) {
+
+}
+
+/** Public **/
+
+
 void IncrementPointer::execute(std::list<char> *data, std::list<char>::iterator *it) const{
 	std::list<char>::iterator temp = *it;
 
@@ -14,3 +28,18 @@ void IncrementPointer::execute(std::list<char> *data, std::list<char>::iterator 
 		++(*it);
 	}
 }
+
+/** Private **/
+/** Operator **/
+IncrementPointer &IncrementPointer::operator=(IncrementPointer const &) {
+	return *this;
+}
+/** Destructor **/
+
+IncrementPointer::~IncrementPointer() {
+
+}
+
+
+
+

@@ -10,7 +10,7 @@
 
 class IExecute {
 public:
-	virtual void	execute(std::list<char> *, std::list<char>::iterator *it) const = 0;
+	virtual void	execute(std::list<char> *, std::list<char>::iterator *) const = 0;
 	virtual ~IExecute() {};
 
 };

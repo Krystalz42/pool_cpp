@@ -9,6 +9,10 @@
 
 class InputByte: public virtual IExecute {
 public:
+	InputByte();
+	~InputByte();
+	InputByte(InputByte const &);
+	InputByte &operator=(InputByte const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
 };
 

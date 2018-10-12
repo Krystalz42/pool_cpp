@@ -9,7 +9,10 @@
 
 class IncrementPointer : virtual public IExecute {
 public:
-private:
+	IncrementPointer();
+	~IncrementPointer();
+	IncrementPointer(IncrementPointer const &);
+	IncrementPointer &operator=(IncrementPointer const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
 };
 

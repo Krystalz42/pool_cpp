@@ -10,8 +10,13 @@
 
 class Loop: public virtual IExecute {
 public:
-	std::deque<IExecute *> deque;
+	Loop();
+	~Loop();
+	Loop(Loop const &);
+	Loop &operator=(Loop const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
+
+	std::deque<IExecute *> deque;
 };
 
 #endif //EX03_LOOPBEGIN_HPP

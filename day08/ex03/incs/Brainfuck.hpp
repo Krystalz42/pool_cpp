@@ -17,10 +17,14 @@ private:
 	std::list<char>				*data;
 	std::queue<IExecute *>		queue;
 	IExecute *(Brainfuck::*ptr[8])(std::string &);
+
+	Brainfuck &operator=(Brainfuck const &);
+
 public:
 
 	Brainfuck();
 	~Brainfuck();
+	Brainfuck(Brainfuck const &);
 
 	void readFile(std::ifstream &file);
 	void executeInstruction();
@@ -33,6 +37,7 @@ public:
 	IExecute *inputByte(std::string & input);
 	IExecute *outputByte(std::string & input);
 	IExecute *loop(std::string & inputinput);
+
 };
 
 

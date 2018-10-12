@@ -9,6 +9,10 @@
 
 class IncrementByte: public virtual IExecute {
 public:
+	IncrementByte();
+	~IncrementByte();
+	IncrementByte(IncrementByte const &);
+	IncrementByte &operator=(IncrementByte const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
 };
 

@@ -9,6 +9,10 @@
 
 class OutputByte : public virtual IExecute {
 public:
+	OutputByte();
+	~OutputByte();
+	OutputByte(OutputByte const &);
+	OutputByte &operator=(OutputByte const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
 };
 

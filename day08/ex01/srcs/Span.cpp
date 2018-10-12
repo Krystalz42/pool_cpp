@@ -27,15 +27,10 @@ void Span::addNumber(unsigned int element) {
 }
 
 void Span::addNumber(std::vector<int> integer) {
-	std::cout << _vector.size() << " " << integer.size() << " " << _size<< std::endl;
 	if (_vector.size() + integer.size() >= _size) {
 		throw std::exception();
 	}
-	std::vector<int>::const_iterator ite = integer.end();
-	for (std::vector<int>::iterator it = integer.begin(); it != ite; ++it) {
-		_vector.push_back(*it);
-
-	}
+	_vector.insert(_vector.end(), integer.begin(), integer.end());
 }
 
 int Span::shortestSpan() {

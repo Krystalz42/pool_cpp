@@ -17,9 +17,9 @@ int main(int argc, char **argv) {
 			bf.executeInstruction();
 		}
 		else
-			std::cout << "error" << std::endl;
+			std::cerr << "Can't open the file" << std::endl;
 
 	} else {
-		std::cout << "display" << std::endl;
+		std::cerr << "Need a file as argument" << std::endl;
 	}
 }

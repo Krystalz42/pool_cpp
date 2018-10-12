@@ -40,18 +40,14 @@ RM			= rm -rf
 # base prefix of the directory.                                                #
 # ---------------------------------------------------------------------------- #
 
-NAME		= brainfuck
+NAME		= polish_reverse_calc
 
 SRCS = \
-		main.cpp		\
-		Brainfuck.cpp	\
-		instructions/DecrementByte.cpp		\
-        instructions/DecrementPointer.cpp		\
-        instructions/IncrementByte.cpp		\
-        instructions/IncrementPointer.cpp		\
-        instructions/InputByte.cpp		\
-        instructions/Loop.cpp		\
-        instructions/OutputByte.cpp		\
+			main.cpp			\
+			Tokenization.cpp	\
+			IsNumber.cpp		\
+			IsOperator.cpp		\
+
 # ---------------------------------------------------------------------------- #
 # /!\ COLOR FOR PRINTF /!\                                                     #
 # ---------------------------------------------------------------------------- #
@@ -90,7 +86,7 @@ CFLAGS		= \
 			-std=c++98						\
 			-fsanitize=address					\
 			-g3							\
-
+			
 
 # ---------------------------------------------------------------------------- #
 # /!\ SOURCE NORMALIZATION AND COMPILATION RULES /!\                           #

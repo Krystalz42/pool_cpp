@@ -32,6 +32,10 @@ Brainfuck::Brainfuck() {
 	data = new std::list<char>(1, '\0');
 }
 
+Brainfuck::Brainfuck(Brainfuck const &) {
+
+}
+
 /** Public **/
 
 void Brainfuck::readFile(std::ifstream &file) {
@@ -42,7 +46,10 @@ void Brainfuck::readFile(std::ifstream &file) {
 	for (; !ss.empty();) {
 		i = getInstruction(ss[0]);
 		if (i == LOOP_END) {
-			std::cerr << "Missing [" << std::endl;
+			std::cerr << "error : Missing [" << std::endl;
+			exit(1);
+		} else if (i == NONE) {
+			std::cerr << "error : bad char" << std::endl;
 			exit(1);
 		}
 		queue.push((this->*ptr[i])(ss));
@@ -58,6 +65,7 @@ void Brainfuck::executeInstruction() {
 		i = queue.front();
 		i->execute(data, &it);
 		queue.pop();
+		delete i;
 	}
 }
 /** Private **/
@@ -116,11 +124,14 @@ IExecute *Brainfuck::loop(std::string &ss) {
 		i = getInstruction(ss[0]);
 		if (i == LOOP_END) {
 			return l;
+		} else if (i == NONE) {
+			std::cerr << "error : bad char" << std::endl;
+			exit(1);
 		}
 		l->deque.push_back((this->*ptr[i])(ss));
 		ss = ss.substr(1, ss.size());
 	}
-	std::cerr << "Missing ]" << std::endl;
+	std::cerr << "error : Missing ]" << std::endl;
 	exit(1);
 }
 
@@ -130,13 +141,20 @@ IExecute *Brainfuck::outputByte(std::string &) {
 }
 
 /** Operator **/
+
+Brainfuck &Brainfuck::operator=(Brainfuck const &) {
+	return *this;
+}
+
+
 /** Destructor **/
 
 
 
 Brainfuck::~Brainfuck() {
-
 }
+
+
 
 
 

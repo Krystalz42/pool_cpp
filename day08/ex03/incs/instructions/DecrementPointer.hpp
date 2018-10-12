@@ -9,6 +9,10 @@
 
 class DecrementPointer : public virtual IExecute {
 public:
+	DecrementPointer();
+	~DecrementPointer();
+	DecrementPointer(DecrementPointer const &);
+	DecrementPointer &operator=(DecrementPointer const &);
 	virtual void execute(std::list<char> *, std::list<char>::iterator *it) const;
 };
 
