@@ -18,6 +18,11 @@ void printString( std::string const s){
 	std::cout << s;
 }
 
+template<typename T>
+void print (T val) {
+	std::cout << val;
+}
+
 template <typename T>
 void 	iter(T *addr, size_t len, void (*f)(T)) {
 	for (size_t index = 0; index < len; index++) {
@@ -30,7 +35,7 @@ int main () {
 	char *c = new char[strlen("Bonjour les students")];
 	c = const_cast<char *>("Bonjour les students");
 	std::cout << "Test mapping on char" << std::endl;
-	iter<char>(c, strlen(c), &printChar);
+	iter<char>(c, strlen(c), &(print<char>));
 	std::cout <<  std::endl;
 	std::cout << std::endl;
 	std::cout << "Test mapping on int" << std::endl;
