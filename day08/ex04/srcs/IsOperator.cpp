@@ -12,7 +12,6 @@ IsOperator::IsOperator() {
 
 }
 IsOperator::IsOperator(const std::string &op) : op(op) {
-	std::cout << "Op(" << op << ") ";
 }
 
 IsOperator::IsOperator(IsOperator const &) {

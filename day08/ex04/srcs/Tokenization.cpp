@@ -45,7 +45,7 @@ void Tokenization::evaluateArgument(std::string &s) {
 				}
 			}
 		} else if (isOperator(s[0])) {
-
+			std::cout << "Op(" << s[0] << ") ";
 			while (stack.top() != 'N' &&
 				   isOperator(s[0]) <= isOperator(stack.top())) {
 				std::string op;
